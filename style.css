@@ -50,3 +50,45 @@ nav a{
         flex-basis: 100%;
     }
 }
+
+
+/* BODY */
+
+.wrapper {
+    padding: 0 2rem;
+}
+
+.wrapper h1{
+    margin-bottom: 1.1rem;
+}
+/* SEARCH FORM */
+
+.search-form {
+    display: flex;
+}
+.search-form i {
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 1rem 0rem 0rem 1rem ;
+ }
+
+ .search-form input{
+    padding : 1rem 3rem;
+    border: 1px solid whitesmoke;
+ }
+
+.search-form input::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.search-form button{
+    background-color: #0065fc;
+    color: white;
+    font-size: 1rem ;
+    font-weight: bold;
+    border-radius: 0rem 1rem 1rem 0rem;
+    padding : 1rem 1.25rem;
+    border : none;
+}
+
