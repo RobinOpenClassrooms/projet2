@@ -59,7 +59,7 @@ nav a{
 }
 
 .wrapper h1{
-    margin-bottom: 1.1rem;
+    margin-bottom: 0rem;
 }
 /* SEARCH FORM */
 
@@ -90,5 +90,6 @@ nav a{
     border-radius: 0rem 1rem 1rem 0rem;
     padding : 1rem 1.25rem;
     border : none;
+    cursor: pointer;
 }
 
