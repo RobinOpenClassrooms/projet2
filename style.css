@@ -4,6 +4,7 @@
     --blue: #0065fc;
     --lightgrey: #f2f2f2;
     --lightblue:  #deebff;
+    --lighterblue: #f3f8ff;
 }
 /*WILDCARD*/
 *{
@@ -85,7 +86,6 @@ nav a{
 
  .search-form input{
     display: flex;
-    padding : 1rem 3rem;
     border: 1px solid whitesmoke;
     flex-shrink: 2;
     overflow: auto;
@@ -130,25 +130,36 @@ nav a{
 }
 
 /* FILTERS */
-.filter-list i {
-    color: var(--blue);
-    padding: 1rem;
-    border-radius: 50%;
-    border: 10px solid blue;
-    margin: 
-}
 .filter-list{
-    display: flex ; 
+    display: flex ;
     align-items: center;
     gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.filter .fas {
+    color: blue;
+    background-color: var(--lightblue);
+    padding: 1rem;
+    border-radius: 50%; 
+    margin: -10px;
+}
+.filter {
+    border: 2px solid #d9d9d9;
+    border-radius: 2rem;
+    padding: 0.5em;
+    transition: all 200ms ease;
 }
 
-.filter {
-    border: 2px solid red;
-    border-radius: 2rem;
+.filter:hover{
+    transform: scale(1.02);
 }
 
 .filter span {
     font-weight: bold;
-    padding: 0.5em;
+    padding: 1em;
 }
+
+
+
+
