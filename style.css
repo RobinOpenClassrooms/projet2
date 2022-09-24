@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
+:root{
+    --blue: #0065fc;
+    --lightgrey: #f2f2f2;
+    --lightblue:  #deebff;
+}
 /*WILDCARD*/
 *{
     box-sizing: border-box;
@@ -10,6 +15,7 @@ a{
     text-decoration: none;
 }
 
+/* NAVBAR */
 nav{
     display: flex;
     align-items: center;
@@ -61,20 +67,28 @@ nav a{
 .wrapper h1{
     margin-bottom: 0rem;
 }
+
 /* SEARCH FORM */
 
 .search-form {
     display: flex;
 }
+
+.search-form > *{
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+}
 .search-form i {
-    padding: 1rem;
-    background-color: whitesmoke;
+    background-color: none;
     border-radius: 1rem 0rem 0rem 1rem ;
  }
 
  .search-form input{
+    display: flex;
     padding : 1rem 3rem;
     border: 1px solid whitesmoke;
+    flex-shrink: 2;
+    overflow: auto;
  }
 
 .search-form input::placeholder{
@@ -88,8 +102,53 @@ nav a{
     font-size: 1rem ;
     font-weight: bold;
     border-radius: 0rem 1rem 1rem 0rem;
-    padding : 1rem 1.25rem;
     border : none;
     cursor: pointer;
+    opacity: 0.9
 }
 
+.search-form button:hover {
+    opacity : 1 ;
+    transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+.search-form .search-text {
+        display: none;
+    }
+}
+@media (min-width: 767px) {
+    .search-form .fa-search{
+        display: none;
+    }
+}
+
+.fas .fa-search {
+    color: white;
+    background-color: #0065fc;
+    display: inline;
+}
+
+/* FILTERS */
+.filter-list i {
+    color: var(--blue);
+    padding: 1rem;
+    border-radius: 50%;
+    border: 10px solid blue;
+    margin: 
+}
+.filter-list{
+    display: flex ; 
+    align-items: center;
+    gap: 2rem;
+}
+
+.filter {
+    border: 2px solid red;
+    border-radius: 2rem;
+}
+
+.filter span {
+    font-weight: bold;
+    padding: 0.5em;
+}
