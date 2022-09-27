@@ -5,6 +5,8 @@
     --lightgrey: #f2f2f2;
     --lightblue:  #deebff;
     --lighterblue: #f3f8ff;
+    --darkgrey: #d9d9d9;
+    --breakpoint: 768 px;
 }
 /*WILDCARD*/
 *{
@@ -51,7 +53,7 @@ nav a{
      border-top-color: #0065fc;
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .sub-nav {
         order: 1;
         flex-basis: 100%;
@@ -76,7 +78,7 @@ nav a{
 }
 
 .search-form > *{
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
 }
 .search-form i {
@@ -136,6 +138,7 @@ nav a{
     gap: 2rem;
     padding: 1rem;
     flex-wrap: wrap;
+
 }
 .filter .fas {
     color: blue;
@@ -159,7 +162,123 @@ nav a{
     font-weight: bold;
     padding: 1em;
 }
+ /*RESULTS-MESSAGE*/
 
+ .results-message {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+ }
 
+ .results-message .fas.fa-info {
+    color: var(--blue);
+    border: 1px solid var(--darkgrey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    
 
+ }
 
+ /* APPARTMENTS LIST */
+
+ .apartments-list{
+    display: flex;
+    gap: 1rem;
+ }
+
+ .apartments-list > div{
+    border: 1px solid red;
+    background-color: var(--lightgrey);
+    padding :1rem;
+    border-radius: 1rem;
+}
+
+.apartments-list .city{
+    flex-basis: 66%;
+}
+
+.apartments-list .popular {
+    flex-basis: 33%;
+}
+
+@media (max-width: 768px) {
+    .apartments-list{
+    flex-direction: column;
+    }
+    .popular{
+        order: -1;
+    }}
+
+.apartments-list .city a {
+    font-weight: bold;
+
+}
+/* LIST APARTMENTS CITY */
+
+.city-apartments-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.city-apartments-list div{
+    border: 1px solid blue;
+    flex-basis: calc(33%-1rem);
+}
+
+/* POPULAR */
+
+.apartments-list .popular-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.apartments-list .popular div {
+    border: 1px solid blue;
+}
+
+.apartments-list h3 {
+    flex-basis: 100%;
+}
+
+@media (max-width: 768px) {
+    .apartments-list .popular-flex {
+    flex-direction : row;
+}}
+
+/* APARTEMENT-CARD */
+.apartment-card {
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 16px #0000002e;
+    flex-grow: 1;
+    
+}
+.apartment-card img {
+    border-radius: 2rem 2rem 0rem 0rem;
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.blue {
+    color: var(--blue);
+}
+.grey {
+    color: var(--darkgrey);
+}
+
+.apartment-card p, .apartment-card h3 {
+    margin: 0.2em;
+}
