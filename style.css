@@ -8,6 +8,53 @@
     --darkgrey: #d9d9d9;
     --breakpoint: 768 px;
 }
+
+
+
+/* NAVBAR */
+
+nav {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 2rem;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent ;
+}
+
+nav a:hover {
+    border-top-color: #0065fc;
+}
+
+#logo {
+    margin-right: auto;
+}
+
+.sub-nav {
+    padding: 0rem;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+ .sub-nav {
+    width: 100%;
+ }
+.sub-nav a {
+    flex-basis: 50%;
+    justify-content: center;
+    text-align: center;
+}
+nav a:hover {
+    border-top-color: transparent;
+    border-bottom-color: var(--blue);
+}
+}
+
 /*WILDCARD*/
 *{
     box-sizing: border-box;
@@ -19,8 +66,8 @@ a{
 }
 
 body {
-    margin: 0 auto;
-    max-width: 1440px;
+    margin: 0 3rem;
+    max-width: 1400px;
 }
 
 
@@ -179,12 +226,27 @@ body {
 }
 /* LIST APARTMENTS CITY */
 
+    
+@media (max-width:1168px) {
+    .apartment-card {
+        flex-direction: row;
+    }
+}
+
+@media (max-width:700px) {
+    .city-apartments-list {
+        flex-basis: 50%;
+        flex-direction: column;
+
+    } 
+}
 .city-apartments-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-around;
     margin-bottom: 1rem;
+   
 }
 
 .city-apartments-list div{
@@ -196,7 +258,6 @@ body {
 
 .apartments-list .popular-flex {
     display: flex;
-    flex-direction: column;
     gap: 1.5rem;
     flex-basis: 100%;
     flex-wrap: wrap;
@@ -209,20 +270,31 @@ body {
 }}
 
 /* APARTEMENT-CARD */
+
+@media (max-width:750px) {
+    .apartment-card {
+        flex-basis: 99%;
+    }
+    
+}
 .apartment-card {
     background-color: white;
     border-radius: 2rem;
     padding: 0.5rem;
     box-shadow: 0 0 16px #0000002e;
     flex-grow: 1;
-    flex-basis: 25%
+    flex-basis: 25%;
+    width: auto;
+
+    
 }
 .apartment-card img {
     border-radius: 1rem 1rem 0rem 0rem;
     height: 7rem;
     width: 100%;
+    
     object-fit: cover;
-    object-position: top;
+    min-width: 10rem;
     
 }
 
@@ -258,7 +330,6 @@ body {
 
 .popular-flex .apartment-card img {
     height: 8rem;
-    
     margin-right: 0.5rem;
 }
 
@@ -306,16 +377,16 @@ body {
 }
 /* ACTIVITIES */
 
+
+
 .activities-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem,25rem) );
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-gap: 1.5rem;
     margin-bottom: 5vh ;
     justify-content: center;
     max-width: 100em;
-   
-    
 }
 
 .activities-list > * {
