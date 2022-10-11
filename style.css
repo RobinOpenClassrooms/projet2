@@ -70,6 +70,15 @@ body {
     max-width: 1400px;
 }
 
+@media (min-height: 768px), screen and (orientation: portrait) {}
+
+@media (max-width: 768px) {
+    .body {
+        margin: 50em;
+    }
+    
+}
+
 
 /* SEARCH FORM */
 
