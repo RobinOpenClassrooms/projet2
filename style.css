@@ -23,17 +23,22 @@ nav {
 
 nav a {
     padding: 2rem;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent ;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent ;
 }
 
 nav a:hover {
     border-top-color: #0065fc;
+    color: #0065fc;
 }
 
 #logo {
     margin-right: auto;
+    padding: 2rem 3rem;
+    width: 12rem;
 }
+
+
 
 .sub-nav {
     padding: 0rem;
@@ -41,6 +46,13 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+
+#logo {
+    display: block;
+    justify-content: center;
+    margin-left: 25%;
+    
+}
  .sub-nav {
     width: 100%;
  }
@@ -55,6 +67,17 @@ nav a:hover {
 }
 }
 
+h1 {
+    padding: 1rem 0rem;
+    margin: 0;
+}
+
+
+@media (max-width: 1200px) {
+h2 {
+    width: 100%;
+}}
+
 /*WILDCARD*/
 *{
     box-sizing: border-box;
@@ -66,11 +89,11 @@ a{
 }
 
 body {
-    margin: 0 3rem;
+    margin: 0 auto;
     max-width: 1400px;
 }
 
-@media (min-height: 768px), screen and (orientation: portrait) {}
+
 
 @media (max-width: 768px) {
     .body {
@@ -79,10 +102,14 @@ body {
     
 }
 
+.sous-titre {
+    margin-top: 0;
+}
 
 /* SEARCH FORM */
 
 .search-form {
+    margin-top: 2rem;
     display: flex;
 }
 
@@ -91,7 +118,6 @@ body {
     font-size: 1rem;
 }
 .search-form i {
-    background-color: none;
     border-radius: 1rem 0rem 0rem 1rem ;
  }
 
@@ -100,6 +126,7 @@ body {
     border: 1px solid whitesmoke;
     flex-shrink: 2;
     overflow: auto;
+    text-decoration: dashed;
  }
 
 .search-form input::placeholder{
@@ -116,6 +143,11 @@ body {
     border : none;
     cursor: pointer;
     opacity: 0.9
+}
+
+.fa-location-dot {
+    background-color: #d9d9d9;
+    padding: 1em;
 }
 
 .search-form button:hover {
@@ -155,6 +187,7 @@ body {
     padding: 1rem;
     border-radius: 50%; 
     margin: -10px;
+    width: 3em;
 }
 .filter {
     border: 2px solid #d9d9d9;
@@ -177,6 +210,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
  }
 
  .results-message .fas.fa-info {
@@ -186,10 +220,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
+    width: 2.2rem;
     height: 2rem;
-    
-
  }
 
  /* APPARTMENTS LIST */
@@ -198,6 +230,7 @@ body {
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
+    padding: 0.5rem;
  }
 
  .apartments-list > div{
@@ -225,14 +258,11 @@ body {
         flex-direction: row;
     }
     .popular-flex{
-        flex-direction: row;
+        flex-direction: column;
     }}
 
 
-.apartments-list .city a {
-    font-weight: bold;
 
-}
 /* LIST APARTMENTS CITY */
 
     
@@ -258,10 +288,6 @@ body {
    
 }
 
-.city-apartments-list div{
-    
-    flex-basis: calc(33%-1rem);
-}
 
 /* POPULAR */
 
@@ -278,7 +304,7 @@ body {
     flex-direction : column;
 }}
 
-/* APARTEMENT-CARD */
+/* APARTMENT-CARD */
 
 @media (max-width:750px) {
     .apartment-card {
@@ -288,7 +314,7 @@ body {
 }
 .apartment-card {
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 0.8rem;
     padding: 0.5rem;
     box-shadow: 0 0 16px #0000002e;
     flex-grow: 1;
@@ -298,12 +324,12 @@ body {
     
 }
 .apartment-card img {
-    border-radius: 1rem 1rem 0rem 0rem;
+    border-radius: 0.7rem 0.7rem 0rem 0rem;
     height: 7rem;
     width: 100%;
     
     object-fit: cover;
-    min-width: 10rem;
+    min-width: 13rem;
     
 }
 
@@ -326,6 +352,14 @@ body {
 
 
 /* POPULAR CARD */
+
+h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 .popular {
     display: flex;
     flex-direction: column;
@@ -349,7 +383,7 @@ body {
 }
 
 .apartment-card.popular-card > img {
-    border-radius: 1rem 0rem 0rem 1rem;
+    border-radius: 0.7rem 0rem 0rem 0.7rem;
     max-width: 8rem;
 }
 
@@ -365,11 +399,13 @@ body {
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
+    min-width: 5em;
 }
 
 .popular h4 {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    max-width: 10rem;
 }
 
 .popular h4,
@@ -381,11 +417,11 @@ body {
     margin-bottom: auto;
 }
 
+
 .apartment-card .popular-card .stars {
     margin-top: auto;
 }
 /* ACTIVITIES */
-
 
 
 .activities-list {
@@ -398,6 +434,8 @@ body {
     max-width: 100em;
 }
 
+
+
 .activities-list > * {
     border-radius: 1rem;
     display: flex;
@@ -406,6 +444,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 9px;
     transition: all 200ms;
     ;
+}
+
+.apartment-card:hover {
+    transform: scale(1.02);
+    transition: all 200ms;
 }
 
 .activities-list div:hover {
@@ -461,6 +504,7 @@ body {
         grid-column: span 1;
         grid-row: span 1;
         max-height: 10em;
+        margin: 0% 5%;
     }
 }
 
@@ -480,11 +524,21 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    font-size: 200;
+    
+}
+
+@media (max-width : 600px) {
+    footer {
+        flex-direction: column;
+    }
 }
 
 footer >* {
 flex-basis: 20%;
 align-items:  center;
+padding: 1rem;
+}
 
+#activités {
+    padding: 1rem;
 }
